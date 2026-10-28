@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#075e54">
+  <meta name="description" content="Aftab Digital Seva - ऑनलाइन सेवा ऑर्डर">
+  <title>Aftab Digital Seva</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brandmark">ADS</div>
+    <div><h1>Aftab Digital Seva</h1><p>आपकी डिजिटल सेवाएँ, अब ऑनलाइन</p></div>
+  </header>
+  <main>
+    <section class="hero">
+      <span class="eyebrow">ONLINE SERVICE CENTER</span>
+      <h2>घर बैठे अपना ऑर्डर भेजें</h2>
+      <p>प्रिंट, स्कैन, टाइपिंग और आवेदन सहायता के लिए ऑर्डर अनुरोध भेजें।</p>
+      <div class="notice">डेमो संस्करण: अभी OTP, भुगतान और फाइल अपलोड सर्वर से जुड़े नहीं हैं।</div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><h2>हमारी सेवाएँ</h2><span>शुल्क एडमिन द्वारा तय होंगे</span></div>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-icon">🖨️</div><h3>प्रिंट</h3><p>PDF / डॉक्यूमेंट प्रिंट अनुरोध</p><button class="choose-service" data-service="प्रिंट">ऑर्डर करें</button></article>
+        <article class="service-card"><div class="service-icon">📄</div><h3>स्कैन</h3><p>दस्तावेज स्कैन अनुरोध</p><button class="choose-service" data-service="स्कैन">ऑर्डर करें</button></article>
+        <article class="service-card"><div class="service-icon">⌨️</div><h3>टाइपिंग</h3><p>हिंदी / अंग्रेज़ी टाइपिंग</p><button class="choose-service" data-service="टाइपिंग">ऑर्डर करें</button></article>
+        <article class="service-card"><div class="service-icon">📝</div><h3>आवेदन सहायता</h3><p>फॉर्म भरने में सहायता</p><button class="choose-service" data-service="आवेदन सहायता">ऑर्डर करें</button></article>
+      </div>
+    </section>
+
+    <section class="section form-section" id="order">
+      <h2>ऑर्डर अनुरोध</h2>
+      <p class="muted">यह फॉर्म अभी केवल नमूना है। इसमें आधार नंबर, बैंक विवरण या अन्य संवेदनशील जानकारी न भरें।</p>
+      <form id="orderForm">
+        <label for="customerName">ग्राहक का नाम</label>
+        <input id="customerName" name="customerName" autocomplete="name" required maxlength="80" placeholder="पूरा नाम">
+        <label for="mobile">मोबाइल नंबर</label>
+        <input id="mobile" name="mobile" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required placeholder="10 अंकों का मोबाइल नंबर">
+        <label for="service">सेवा चुनें</label>
+        <select id="service" name="service" required>
+          <option value="">सेवा चुनें</option><option>प्रिंट</option><option>स्कैन</option><option>टाइपिंग</option><option>आवेदन सहायता</option>
+        </select>
+        <label for="details">ऑर्डर का विवरण</label>
+        <textarea id="details" name="details" rows="3" maxlength="500" placeholder="जैसे: 5 पेज ब्लैक एंड व्हाइट प्रिंट"></textarea>
+        <button class="primary" type="submit">डेमो ऑर्डर देखें</button>
+      </form>
+      <div id="result" class="result" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="section">
+      <h2>ऑर्डर की स्थिति</h2>
+      <p class="muted">वास्तविक ऑर्डर नंबर मिलने के बाद यहाँ स्थिति देखने की सुविधा जोड़ी जाएगी।</p>
+      <div class="status-steps"><span>1. प्राप्त</span><span>2. प्रक्रिया में</span><span>3. पूरा हुआ</span></div>
+    </section>
+
+    <section class="section admin-note">
+      <h2>एडमिन पैनल</h2>
+      <p>अगले चरण में सुरक्षित एडमिन लॉगिन, ऑर्डर सूची, ग्राहक रिकॉर्ड, भुगतान रसीद, दैनिक कैश रिपोर्ट और Excel एक्सपोर्ट जोड़े जाएँगे।</p>
+    </section>
+  </main>
+  <footer><strong>Aftab Digital Seva</strong><br><span>यह शुरुआती UI प्रोटोटाइप है, लाइव सेवा पोर्टल नहीं।</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
